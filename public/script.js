@@ -130,7 +130,7 @@ function appendSystemMessage(text) {
 }
 
 function escapeHtml(str) {
-  return (str || '').replace(/[&<>"']/g, s => ({"&":"&amp;","<":"&lt;","}":"&gt;","\"":"&quot;","'":"&#039;"}[s]));
+  return (str || '').replace(/[&<>"']/g, s => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[s]));
 }
 
 // emoji picker
@@ -142,6 +142,19 @@ if (emojiBar) {
       const input = document.getElementById('chat_message');
       input.value += emoji;
       input.focus();
+    });
+  });
+}
+
+// ** Copy Meeting Link Fix **
+const copyBtn = document.getElementById('copy-link');
+if (copyBtn) {
+  copyBtn.addEventListener('click', () => {
+    const roomUrl = `${window.location.origin}/room/${ROOM_ID}`;
+    navigator.clipboard.writeText(roomUrl).then(() => {
+      alert('Meeting link copied to clipboard!');
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
     });
   });
 }
