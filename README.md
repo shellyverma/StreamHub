@@ -1,4 +1,4 @@
-# 🎥 StreamHub – Zoom Clone (Node.js + Socket.io + PeerJS)
+# 🎥 StreamHub – (Node.js + Socket.io + PeerJS)
 
 A simple Zoom-like video calling web app built with **Node.js**, **Express**, **Socket.io**, and **PeerJS**.  
 This project supports real-time video calls, chat, emoji support 🎉, and even a 🌙 Dark Mode toggle.
@@ -10,7 +10,6 @@ This project supports real-time video calls, chat, emoji support 🎉, and even 
 - 🎥 Real-time video conferencing
 - 💬 Real-time group chat
 - 😀 Emoji support in chat
-- 🌙 Light / Dark mode toggle
 - 🎙️ Mute / Unmute microphone
 - 📹 Start / Stop video
 - 👨‍👩‍👧‍👦 Participant list placeholder
