@@ -1,0 +1,27 @@
+{
+  "name": "streamhub",
+  "version": "1.0.0",
+  "description": "Real-time video chat with WebRTC, PeerJS, Socket.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "webrtc",
+    "video",
+    "socket.io",
+    "peerjs",
+    "ejs"
+  ],
+  "author": "Shelly Verma <shellyverma1015@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "peer": "^0.5.3",
+    "peerjs": "^1.3.1",
+    "socket.io": "^2.5.1",
+    "uuid": "^8.3.2"
+  }
+}
