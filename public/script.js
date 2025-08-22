@@ -1,10 +1,12 @@
-const socket = io('/');
+const SOCKET_HOST = 'https://streamhub-tbes.onrender.com'; // Render URL
+
+const socket = io(SOCKET_HOST);
 const videoGrid = document.getElementById('video-grid');
 
 const myPeer = new Peer(undefined, {
   path: '/peerjs',
-  host: '/',
-  port: location.protocol === 'https:' ? '443' : (location.port || '3030')
+  host: 'streamhub-tbes.onrender.com',
+  port: 443
 });
 
 let myVideoStream;
@@ -146,11 +148,11 @@ if (emojiBar) {
   });
 }
 
-// ** Copy Meeting Link Fix **
+// Copy Meeting Link
 const copyBtn = document.getElementById('copy-link');
 if (copyBtn) {
   copyBtn.addEventListener('click', () => {
-    const roomUrl = `${window.location.origin}/room/${ROOM_ID}`;
+    const roomUrl = `${SOCKET_HOST}/room/${ROOM_ID}`;
     navigator.clipboard.writeText(roomUrl).then(() => {
       alert('Meeting link copied to clipboard!');
     }).catch(err => {
